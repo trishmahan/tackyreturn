@@ -1,21 +1,23 @@
 <!doctype html>
 <html>
     <link rel="stylesheet" href="static/css/styles.css">
-   <body>
+   <body class="landing">
     <div class="box">
-      <form action = "http://localhost:5000/home" method = "POST">
-         <p>Name <input type = "text" name = "Name" /></p>
-         <p>Select your favorite trait</p>
-         <input type="radio" id="brave" name="trait" value="brave">
-         <label for="brave">Brave</label><br>
-         <input type="radio" id="loyal" name="trait" value="loyal">
-         <label for="loyal">Loyal</label><br>
-         <input type="radio" id="wise" name="trait" value="wise">
-         <label for="wise">Wise</label><br>
-         <input type="radio" id="cunning" name="trait" value="cunning">
-         <label for="cunning">Cunning</label>
-         <p><input type = "submit" value = "submit" /></p>
-      </form>
+        <img src="/static/img/hat.png" alt="Sorting Hat">
+        <h1>Welcome to Hogwarts: Return of the T@ckyh0lidayz</h1>
+        <form action = "http://localhost:5000/home" method = "POST">
+            <p>Name <input type = "text" name = "Name" /></p>
+            <p>Select your favorite trait</p>
+            <input type="radio" id="brave" name="trait" value="brave">
+            <label for="brave">Brave</label>
+            <input type="radio" id="loyal" name="trait" value="loyal">
+            <label for="loyal">Loyal</label><br>
+            <input type="radio" id="wise" name="trait" value="wise">
+            <label for="wise">Wise</label>
+            <input type="radio" id="cunning" name="trait" value="cunning">
+            <label for="cunning">Cunning</label>
+            <p><input type = "submit" value = "Submit" /></p>
+        </form>
     </div>
    </body>
 </html>
