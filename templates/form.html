@@ -3,7 +3,15 @@
    <body>
       <form action = "http://localhost:5000/home" method = "POST">
          <p>Name <input type = "text" name = "Name" /></p>
-         <p>2020 Memory <input type = "text" name = "Memory" /></p>
+         <p>Select your favorite trait</p>
+         <input type="radio" id="brave" name="trait" value="brave">
+         <label for="brave">Brave</label><br>
+         <input type="radio" id="loyal" name="trait" value="loyal">
+         <label for="loyal">Loyal</label><br>
+         <input type="radio" id="wise" name="trait" value="wise">
+         <label for="wise">Wise</label><br>
+         <input type="radio" id="cunning" name="trait" value="cunning">
+         <label for="cunning">Cunning</label>
          <p><input type = "submit" value = "submit" /></p>
       </form>
    </body>

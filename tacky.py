@@ -11,5 +11,11 @@ def result():
       result = request.form
       return render_template("home.html",result = result)
 
+# @app.route('/hoggy-hoggy-hogwartz',methods = ['POST', 'GET'])
+# def result():
+#    if request.method == 'POST':
+#       result = request.form
+#       return render_template("home.html",result = result)
+
 if __name__ == '__main__':
    app.run(debug = True)
