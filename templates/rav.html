@@ -8,14 +8,11 @@
          background-size: cover;
       }
    </style>
+   <link rel="stylesheet" href="static/css/styles.css">
    <body>
-      <table border = 1>
-         {% for key, value in result.items() %}
-            <tr>
-               <th> {{ key }} </th>
-               <td> {{ value }} </td>
-            </tr>
-         {% endfor %}
-      </table>
+      <div class=box>
+         <img src="/static/img/dumbledore.png" alt="Dumbledore" width="200" height="200">
+         <h1>Welcome to Ravenclaw, {{result['Name']}}</h1>
+      </div>
    </body>
 </html>
