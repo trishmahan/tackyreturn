@@ -20,26 +20,47 @@ def tacky_form():
 def result():
     if request.method == 'POST':
         result = request.form
+        audio_path = "static/mp3/"
         if result['trait'] == "brave":
             input_text = "Welcome to Gryffindor, " + result['Name']
-            speak_with_google(input_text, "gryf.mp3")
-            time.sleep(1)
-            return render_template("gryf.html",result = result)
+            file_name = result['Name'].lower() + "-gryf.mp3"
+            audio_path = audio_path + file_name
+            if path.exists(audio_path):
+                return render_template("gryf.html",result = result,audio = audio_path)
+            else: 
+                audio_path = speak_with_google(input_text, file_name)
+                time.sleep(1)
+                return render_template("gryf.html",result = result,audio = audio_path)
         elif result['trait'] == "loyal":
             input_text = "Welcome to Hufflepuff, " + result['Name']
-            speak_with_google(input_text, "huff.mp3")
-            time.sleep(1)
-            return render_template("huff.html",result = result)
+            file_name = result['Name'].lower() + "-huff.mp3"
+            audio_path = audio_path + file_name
+            if path.exists(audio_path):
+                return render_template("huff.html",result = result,audio = audio_path)
+            else: 
+                audio_path = speak_with_google(input_text, file_name)
+                time.sleep(1)
+                return render_template("huff.html",result = result,audio = audio_path)
         elif result['trait'] == "wise":
             input_text = "Welcome to Ravenclaw, " + result['Name']
-            speak_with_google(input_text, "rav.mp3")
-            time.sleep(1)
-            return render_template("rav.html",result = result)
+            file_name = result['Name'].lower() + "-rav.mp3"
+            audio_path = audio_path + file_name
+            if path.exists(audio_path):
+                return render_template("rav.html",result = result,audio = audio_path)
+            else: 
+                audio_path = speak_with_google(input_text, file_name)
+                time.sleep(1)
+                return render_template("rav.html",result = result,audio = audio_path)
         elif result['trait'] == "cunning":
             input_text = "Welcome to Slytherin, " + result['Name']
-            speak_with_google(input_text, "slyth.mp3")
-            time.sleep(1)
-            return render_template("slyth.html",result = result)
+            file_name = result['Name'].lower() + "-slyth.mp3"
+            audio_path = audio_path + file_name
+            if path.exists(audio_path):
+                return render_template("slyth.html",result = result,audio = audio_path)
+            else: 
+                audio_path = speak_with_google(input_text, file_name)
+                time.sleep(1)
+                return render_template("slyth.html",result = result,audio = audio_path)
         else:
             return render_template("home.html",result = result)
 
@@ -68,6 +89,7 @@ def speak_with_google(input_text, file_name):
         # Write the response to the output file.
         out.write(response.audio_content)
         print('Audio content written to file "output.mp3"')
+    return path
 
 
 
