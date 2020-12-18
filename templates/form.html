@@ -1,7 +1,11 @@
 <!doctype html>
 <html>
     <link rel="stylesheet" href="static/css/styles.css">
-   <body class="landing">
+   <body class="landing" onload=playAudio()>
+    <audio id="hp-holiday">
+        <source src="/static/mp3/hpmusic.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
     <div class="box">
         <img src="/static/img/hat.png" alt="Sorting Hat">
         <h1>Welcome to Hogwarts: Return of the T@ckyh0lidayz</h1>
@@ -17,7 +21,21 @@
             <input type="radio" id="cunning" name="trait" value="cunning">
             <label for="cunning">Cunning</label>
             <p><input type = "submit" value = "Submit" /></p>
+            <button onclick="playAudio()" type="button">Play</button>
+            <button onclick="pauseAudio()" type="button">Pause</button> 
         </form>
     </div>
+    <script>
+        var x = document.getElementById("hp-holiday"); 
+        
+        function playAudio() { 
+          x.play(); 
+        } 
+        
+        function pauseAudio() { 
+          x.pause(); 
+        } 
+    </script>
+        
    </body>
 </html>

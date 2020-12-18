@@ -2,3 +2,4 @@ tacky/
 .env
 .DS_Store
 .vscode/
+static/mp3/

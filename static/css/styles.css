@@ -13,7 +13,7 @@
     padding: 20px;
     border-radius: 20%;
 }
-h1, h2 {
+h1, h2, button {
     font-family: 'Shadows Into Light', cursive; 
 }
 
@@ -56,6 +56,7 @@ input[type=submit] {
     background-color: white;
     border: 4px;
     border-color: black;
+    border-style: solid;
     color: black;
     padding: 16px 32px;
     text-decoration: none;
@@ -63,4 +64,16 @@ input[type=submit] {
     cursor: pointer;
     border-radius: 47%;
     font-family: 'Montserrat', sans-serif;
+  }
+button {
+    background-color: white;
+    border: 4px;
+    border-color: black;
+    border-style: solid;
+    color: black;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 47%;
   }
