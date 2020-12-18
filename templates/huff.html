@@ -1,10 +1,25 @@
 <!doctype html>
 <html>
    <link rel="stylesheet" href="static/css/styles.css">
-   <body class=huff>
+   <body class="huff" onload=playAudio()>
+      <audio id="welcome">
+         <source src="/static/mp3/huff.mp3" type="audio/mpeg">
+         Your browser does not support the audio element.
+     </audio>
       <div class=box>
          <img src="/static/img/dumbledore.png" alt="Dumbledore" width="200" height="200">
          <h1>Welcome to Hufflepuff, {{result['Name']}}</h1>
       </div>
+      <script>
+         var x = document.getElementById("welcome"); 
+         
+         function playAudio() { 
+           x.play(); 
+         } 
+         
+         function pauseAudio() { 
+           x.pause(); 
+         } 
+     </script>
    </body>
 </html>
